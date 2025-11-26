@@ -1,15 +1,15 @@
 # Algorithms/array_problems/move_zeros.py
 
 def move_zeros(arr):
-    non_zero_index = 0  # Track the position for non-zero elements
-
-    # Move non-zero elements forward
+    non_zero_index = 0
     for i in range(len(arr)):
         if arr[i] != 0:
             arr[non_zero_index], arr[i] = arr[i], arr[non_zero_index]
             non_zero_index += 1
 
-# Example usage
-arr = [0, 1, 0, 3, 12]
+# Get array input from user
+user_input = input("Enter numbers separated by space: ")
+arr = [int(x) for x in user_input.split()]
+
 move_zeros(arr)
-print(arr)  # Output: [1, 3, 12, 0, 0]
+print("Array after moving zeros to the end:", arr)
