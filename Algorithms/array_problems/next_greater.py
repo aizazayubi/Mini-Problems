@@ -36,6 +36,6 @@ def next_greater(arr):
     return result
 
 
-# Example
+
 arr = [4, 5, 2, 25]
 print(next_greater(arr))  # [5, 25, 25, -1]
