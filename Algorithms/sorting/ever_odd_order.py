@@ -1,3 +1,6 @@
+
+
+# even in the right , odd in the left
 # def custom_sort(arr):
 #     evens = sorted([x for x in arr if x % 2 == 0])
 #     odds = sorted([x for x in arr if x % 2 != 0], reverse=True)
