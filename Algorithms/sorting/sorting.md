@@ -1,52 +1,78 @@
-## Heap Sort – Complexity Analysis
+# Sorting Algorithms – Complexity Analysis
 
-### 1. Building the Max-Heap
+---
+
+## 1. Heap Sort – Complexity Analysis
+
+### Building the Max-Heap
 - Heapify is applied to `n/2` nodes.
-- Each `heapify` operation takes `O(log n)`.
-- Loose bound: `O(n log n)`
-- Tight bound: `O(n)` for heap construction.
-
-### 2. Extracting Elements
-- `n` extractions; each calls `heapify`.
 - Each `heapify` takes `O(log n)`.
-- Total: `O(n log n)`
+- Tight bound for building heap: `O(n)`.
 
-### **Overall Time Complexity**
+### Extracting Elements
+- `n` extractions.
+- Each extraction calls `heapify` → `O(log n)`.
+- Total: `O(n log n)`.
+
+### Time Complexity
 - **Best:** `O(n log n)`
 - **Average:** `O(n log n)`
 - **Worst:** `O(n log n)`
 
-### **Space Complexity**
-- In-place
-- **Space:** `O(1)`
+### Space Complexity
+- In-place: **O(1)**
 
-### **Stability**
-- Not stable
-
+### Stability
+- **Not stable**
 
 ---
 
-## Quick Sort – Complexity Analysis
+## 2. Quick Sort – General Complexity Analysis
 
-### 1. Partitioning Process
-- Each partition divides the list around a pivot.
-- Partitioning itself costs `O(n)`.
+### Partitioning
+- Partitioning costs `O(n)` per level.
 
-### 2. Recurrence
-- Depends on pivot selection.
-
-### **Time Complexity**
+### Time Complexity
 - **Best:** `O(n log n)`  
-  (pivot splits the array evenly)
-- **Average:** `O(n log n)`  
-  (randomised or good pivot selection)
+  (balanced partitions)
+- **Average:** `O(n log n)`
 - **Worst:** `O(n²)`  
-  (array already sorted + bad pivot like first/last element)
+  (highly unbalanced partitions)
 
-### **Space Complexity**
-- Recursive function calls.
+### Space Complexity
+- **Average:** `O(log n)` recursion depth  
+- **Worst:** `O(n)` when recursion degenerates
+
+### Stability
+- **Not stable**
+
+---
+
+## 3. Quick Sort (Given Code Version)
+
+### Pivot Choice
+- Uses **last element** as pivot (`pivot = arr[high]`).
+- Performance depends on input order.
+
+### Time Complexity
+- **Best:** `O(n log n)`
+- **Average:** `O(n log n)`
+- **Worst:** `O(n²)`  
+  Occurs when:
+  - array is already sorted (ascending),
+  - reverse sorted,
+  - all values identical.
+
+### Space Complexity
 - **Average:** `O(log n)`
-- **Worst:** `O(n)` if recursion degenerates.
+- **Worst:** `O(n)` (deep recursion)
 
-### **Stability**
-- Not stable (swaps may disturb equal elements)
+### Stability
+- **Not stable**
+
+### Notes
+- Uses Lomuto partition scheme.
+- Fully in-place (no extra arrays).
+- Simple but pivot selection can be improved (e.g., random pivot, median-of-three).
+
+
