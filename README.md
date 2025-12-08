@@ -3,6 +3,9 @@
 # Mini-Problems
 
 A collection of small algorithmic and programming challenges solved in Python. This repository serves as a practice ground for improving logic, problem-solving, and coding skills.
+Quick Sort
+Heap Sort
+
 
 ## Structure
 
