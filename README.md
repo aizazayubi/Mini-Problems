@@ -39,6 +39,7 @@ Each file in the **Algorithms** folder includes a problem statement and its Pyth
 ## Contributing
 
 You can add new problems, improve solutions, or optimize existing ones. Please keep code clean and include brief comments or explanations where needed.
+Stack class added
 
 ## License
 
