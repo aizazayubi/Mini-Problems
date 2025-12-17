@@ -12,5 +12,7 @@ def is_balanced(s):
     return not stack
 
 # Example
-print(is_balanced("{[()]}"))   # True
-print(is_balanced("{[(])}"))   # False
+# print(is_balanced("{[()]}"))   # True
+# print(is_balanced("{[(])}"))   # False
+s = input("Enter brackets string: ")
+print(is_balanced(s))
