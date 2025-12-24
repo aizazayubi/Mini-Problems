@@ -8,3 +8,4 @@ _ Max Product
 - Reverse Array
 - Second Largest
 - Two Sum (Leat Code)
+- Missing Number using XOR
